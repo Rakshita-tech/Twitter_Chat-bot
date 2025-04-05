@@ -21,6 +21,17 @@ logger = logging.getLogger()
 # Load environment variables from .env file
 load_dotenv()
 
+
+# Access Twitter API credentials
+TWITTER_API_KEY = os.getenv("TWITTER_API_KEY")
+TWITTER_API_SECRET = os.getenv("TWITTER_API_SECRET")
+TWITTER_ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN")
+TWITTER_ACCESS_SECRET = os.getenv("TWITTER_ACCESS_SECRET")
+TWITTER_BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
+
+# Print to check if they are loaded (optional, remove this in production)
+print("API Key:", TWITTER_API_KEY)
+
 # ======= CONFIGURATION =======
 # Bot behavior settings (customize these)
 TWEET_INTERVAL = 60 * 60  # Post every 60 minutes (in seconds)
